@@ -1,7 +1,5 @@
-import os
 
-# Define the content of the README.md
-readme_content = """# Isolate-ID: Automated Genomic Assembly & Genotyping
+# Isolate-ID: Automated Genomic Assembly & Genotyping
 
 This project is a Nextflow-based Proof of Concept (POC) designed for a computational genomics assignment. It automates the process of downloading SRA data, cleaning reads, performing parallel assembly and quality control, and finally genotyping the isolate using MLST.
 
