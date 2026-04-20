@@ -18,9 +18,7 @@ Before running the pipeline, ensure your system (Linux, macOS, or WSL2) has the 
 
 ---
 
-## Getting Started
-
-### 1. Prepare the Data
+## Getting Started: Prepare the Data
 You have two options to provide input data for the pipeline.
 
 #### Option A: Use your own data
@@ -35,3 +33,13 @@ bash ./scripts/data_download.sh
 
 # To download a specific accession
 bash ./scripts/data_download.sh YOUR_ACCESSION_HERE
+
+## Running the Pipeline
+
+Once input data has been downloaded simply run the following bash command to kick off the workflow:
+
+```bash
+nextflow run ./nextflows/complete_mlst.nf -with-conda
+```
+
+
