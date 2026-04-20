@@ -1,1 +1,45 @@
-# my_first_wf
+import os
+
+# Define the content of the README.md
+readme_content = """# Isolate-ID: Automated Genomic Assembly & Genotyping
+
+This project is a Nextflow-based Proof of Concept (POC) designed for a computational genomics assignment. It automates the process of downloading SRA data, cleaning reads, performing parallel assembly and quality control, and finally genotyping the isolate using MLST.
+
+## Workflow Architecture
+The pipeline is designed to demonstrate both **sequential** and **parallel** processing as required by the assignment guidelines:
+
+* **Sequential Logic:** `Download` → `Trimming (Trimmomatic)` → `Assembly (SKESA)` → `Genotyping (MLST)`.
+* **Parallel Logic:** `SKESA (Assembly)` and `FastQC (Quality Control)` branch from the trimmed reads and run simultaneously to optimize resource usage.
+
+
+
+---
+
+## Prerequisites
+
+Before running the pipeline, ensure your system (Linux, macOS, or WSL2) has the following installed:
+
+* **Nextflow:** For workflow management.
+* **Conda / Mamba:** For environment and software management (Trimmomatic, SKESA, FastQC).
+* **Docker:** **Must be running** to execute the MLST genotyping step.
+* **Java 17+:** Required to run Nextflow.
+
+---
+
+## Getting Started
+
+### 1. Prepare the Data
+You have two options to provide input data for the pipeline.
+
+#### Option A: Use your own data
+Place your paired-end FastQ files directly into the `raw_fastq/` folder. The pipeline recognizes `.fq`, `.fq.gz`, `.fastq`, and `.fastq.gz` extensions.
+*Files must follow the `*_1` and `*_2` (or `_R1`/`_R2`) naming convention.*
+
+#### Option B: Use the download script
+Run the provided Bash script to fetch data from the NCBI SRA. This script defaults to a test isolate if no accession is provided.
+```bash
+# To download the default test data (SRR36396747)
+bash ./scripts/data_download.sh
+
+# To download a specific accession
+bash ./scripts/data_download.sh YOUR_ACCESSION_HERE
