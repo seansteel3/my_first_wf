@@ -17,6 +17,15 @@ Before running the pipeline, ensure your system (Linux, macOS, or WSL2) has the 
 * **Docker:** **Must be running** to execute the MLST genotyping step.
 * **Java 17+:** Required to run Nextflow.
 
+## Tested Conditions
+The following versions have been tested with this workflow and are guaranteed to work. Other configurations may run into issues, but this workflow is designed to be system agnostic and should function on any system where the above prerequisites are satisfied.
+
+* M3 Max running Tahoe 26.3.1 with Rosetta2 emulation for all conda installations
+* Nextflow version 25.10.4.11173
+* Conda version 26.1
+* Java version 17
+* Docker version 29.2.1
+
 ---
 
 ## Getting Started: Prepare the Data
@@ -45,7 +54,7 @@ bash ./scripts/data_download.sh YOUR_ACCESSION_HERE
 ```
 ## Running the Pipeline
 
-Once input data has been downloaded simply run the following bash command from the root of this project directory. in any terminal where nextflow is accessible to kick off the workflow:
+Once input data has been downloaded simply run the following bash command from the root of this repository in any terminal where nextflow is accessible to kick off the workflow:
 
 ```bash
 nextflow run ./nextflows/complete_mlst.nf -with-conda
