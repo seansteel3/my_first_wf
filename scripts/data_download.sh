@@ -1,7 +1,10 @@
 #!/bin/bash
 
+ACCESSION=${1:-"SRR36396747"}
 ENV_NAME="sra_tools_env"
-ACCESSION="SRR38066332"
+OUT_DIR="raw_fastq"
+
+echo "Downloading Accession: $ACCESSION"
 
 #check conda installation and env existiance 
 if ! command -v conda &> /dev/null; then
@@ -21,13 +24,19 @@ CONDA_BASE=$(conda info --base)
 source "$CONDA_BASE/etc/profile.d/conda.sh"
 conda activate "$ENV_NAME"
 
+mkdir -p "$OUT_DIR"
+
 #download data from ncbi
 echo "Starting download for $ACCESSION..."
 
-prefetch "$ACCESSION"
-
+prefetch "$ACCESSION" --output-directory "$OUT_DIR"
 
 echo "Converting to FASTQ..."
-fasterq-dump "$ACCESSION" --progress --split-files
-
+fasterq-dump "$ACCESSION" \
+    --outdir "$OUT_DIR" \
+    --split-files \
+    --progress
+    
 echo "Download complete for $ACCESSION"
+
+rm -r $OUT_DIR/$ACCESSION
