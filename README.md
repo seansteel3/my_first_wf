@@ -3,7 +3,10 @@
 
 This project is a Nextflow-based workflow designed to automate the process of downloading SRA data, cleaning reads, performing parallel assembly and quality control, and finally genotyping the isolate using MLST.
 
-## Workflow Architecture
+## Workflow Diagram
+
+<img width="480" height="760" alt="workflow_diagram" src="https://github.com/user-attachments/assets/451b8bb0-bf47-495d-b8dd-58874f4da112" />
+
 
 ---
 
