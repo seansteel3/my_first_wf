@@ -25,7 +25,7 @@ my_first_wf/
 │   ├── reports/            # Output from CHECK_QUALITY & NF Engine
 │   └── genotyping/         # Output from RUN_MLST
 └── work/                   # Nextflow internal execution files (Safe to delete after run)
-
+```
 ## Prerequisites
 
 Before running the pipeline, ensure your system (Linux, macOS, or WSL2) has the following installed:
