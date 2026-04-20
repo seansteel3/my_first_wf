@@ -20,6 +20,14 @@ Before running the pipeline, ensure your system (Linux, macOS, or WSL2) has the 
 ---
 
 ## Getting Started: Prepare the Data
+
+Please git clone this repository to your desired local location to run this workflow. Unless explicitly mentioned, all actions should take place in the root of this repository.
+
+``` bash
+git clone https://github.com/seansteel3/my_first_wf/
+cd ./my_first_wf
+```
+
 You have two options to provide input data for the pipeline.
 
 #### Option A: Use your own data
@@ -37,7 +45,7 @@ bash ./scripts/data_download.sh YOUR_ACCESSION_HERE
 ```
 ## Running the Pipeline
 
-Once input data has been downloaded simply run the following bash command in any terminal where nextflow is accessible to kick off the workflow:
+Once input data has been downloaded simply run the following bash command from the root of this project directory. in any terminal where nextflow is accessible to kick off the workflow:
 
 ```bash
 nextflow run ./nextflows/complete_mlst.nf -with-conda
