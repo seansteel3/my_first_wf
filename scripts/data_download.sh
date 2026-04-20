@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ACCESSION=${1:-"SRR36396747"}
+ACCESSION=${1:-"SRR36694068"}
 ENV_NAME="sra_tools_env"
 OUT_DIR="raw_fastq"
 
