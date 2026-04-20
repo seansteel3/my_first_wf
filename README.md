@@ -1,7 +1,7 @@
 
 # Isolate-ID: Automated Genomic Assembly & Genotyping
 
-This project is a Nextflow-based workflow designed to automate the process of downloading SRA data, cleaning reads, performing parallel assembly and quality control, and finally genotyping the isolate using MLST.
+This project is a Nextflow-based workflow designed to automate the process of cleaning raw fastq reads, performing parallel genome assembly and quality control, and finally genotyping the isolate using MLST.
 
 ## Workflow Diagram
 
