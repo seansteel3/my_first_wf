@@ -33,7 +33,7 @@ bash ./scripts/data_download.sh
 
 # To download a specific accession
 bash ./scripts/data_download.sh YOUR_ACCESSION_HERE
-
+```
 ## Running the Pipeline
 
 Once input data has been downloaded simply run the following bash command to kick off the workflow:
