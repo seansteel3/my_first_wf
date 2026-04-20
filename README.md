@@ -1,15 +1,9 @@
 
 # Isolate-ID: Automated Genomic Assembly & Genotyping
 
-This project is a Nextflow-based Proof of Concept (POC) designed for a computational genomics assignment. It automates the process of downloading SRA data, cleaning reads, performing parallel assembly and quality control, and finally genotyping the isolate using MLST.
+This project is a Nextflow-based workflow designed to automate the process of downloading SRA data, cleaning reads, performing parallel assembly and quality control, and finally genotyping the isolate using MLST.
 
 ## Workflow Architecture
-The pipeline is designed to demonstrate both **sequential** and **parallel** processing as required by the assignment guidelines:
-
-* **Sequential Logic:** `Download` → `Trimming (Trimmomatic)` → `Assembly (SKESA)` → `Genotyping (MLST)`.
-* **Parallel Logic:** `SKESA (Assembly)` and `FastQC (Quality Control)` branch from the trimmed reads and run simultaneously to optimize resource usage.
-
-
 
 ---
 
