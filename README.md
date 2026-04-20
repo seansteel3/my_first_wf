@@ -45,6 +45,8 @@ nextflow run ./nextflows/complete_mlst.nf -with-conda
 
 ## Directory Tree
 
+The final MLST outputs are found in the results --> genotyping results {SRA}_mslt.tsv summary file, while the FastQC reports are found in the results --> reports directory. Details on the remaining outputs and directory structure shown below:
+
 ```text
 my_first_wf/
 ├── raw_fastq/              # Input: Unprocessed sequencing data
